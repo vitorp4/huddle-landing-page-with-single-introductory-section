@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-image: url(images/bg-desktop.svg);
+  background-color: var(--violet);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 65%;
+  color: #fff;
+  display: grid;
+  grid-template-rows: 150px 1fr 80px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 96px;
+}
+
+header > img {
+  width: 200px;
+  height: auto;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 64px;
+  padding: 24px 96px 0 96px;
+}
+
+main > img {
+  width: 50%;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 38px;
+  margin: 36px 0 20px;
+}
+
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 18px;
+  margin-bottom: 24px;
+  line-height: 26px;
+}
+
+button {
+  background-color: #fff;
+  padding: 14px 60px;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  font-size: 16px;
+  color: var(--violet);
+  border-radius: 40px;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 4px 4px 6px rgba(0,0,0,0.2);
+}
+
+button:hover {
+  background-color: var(--soft-magenta);
+  color: #fff;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 96px;
+  align-items: flex-start;
+}
+
+.social-links {
+  display: flex;
+  gap: 12px;
+}
+
+.social-links .icon {
+  border: 1.6px solid #fff;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.social-links .icon:hover {
+  color: var(--soft-magenta);
+  border-color: currentColor;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url(images/bg-mobile.svg);
+    background-size: contain;
+    background-position-y: 0;
+    grid-template-rows: 100px 1fr 100px;
+  }
+
+  header {
+    padding: 0 32px;
+  }
+
+  header > img {
+    width: 120px;
+  }
+
+  main {
+    flex-direction: column;
+    gap: 24px;
+    padding: 16px 32px 24px;
+    align-items: center;
+  }
+
+  main > img {
+    width: 100%;
+  }
+
+  section {
+    display: grid;
+    place-items: center;
+  }
+
+  h1 {
+    font-size: 22px;
+    text-align: center;
+    margin: 24px 0 8px;
+  }
+
+  p {
+    margin-top: 8px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  button {
+    font-size: 12px;
+    padding: 8px 60px;
+  }
+
+  footer {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .social-links > .icon {
+    border-width: 1px;
+    width: 30px;
+    font-size: 16px;
+    height: 30px;
+  }
+}
